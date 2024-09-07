@@ -17,5 +17,10 @@ public class ReadDataFromJson {
         return dataModal;
     }
 
+    public static DataModal dataModal() throws FileNotFoundException {
+        ReadDataFromJson readDataFromJson = new ReadDataFromJson();
+        return readDataFromJson.readJsonFile();
+    }
+
 
 }

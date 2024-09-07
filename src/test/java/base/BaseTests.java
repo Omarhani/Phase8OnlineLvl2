@@ -11,6 +11,8 @@ import reader.ReadDataFromJson;
 
 import java.io.FileNotFoundException;
 
+import static reader.ReadDataFromJson.dataModal;
+
 public class BaseTests {
 
     WebDriver driver;
@@ -34,8 +36,5 @@ public class BaseTests {
         driver.get(dataModal().URL);
     }
 
-    public DataModal dataModal() throws FileNotFoundException {
-        ReadDataFromJson readDataFromJson = new ReadDataFromJson();
-        return readDataFromJson.readJsonFile();
-    }
+
 }
