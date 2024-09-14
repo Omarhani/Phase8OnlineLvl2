@@ -6,10 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 import pages.HomePage;
 import reader.ReadDataFromJson;
 
@@ -29,14 +26,14 @@ public class BaseTests {
 
     @Parameters("browser")
     @BeforeClass
-    public void setUp(String browser){
+    public void setUp(@Optional ("chrome")String browser){
         setUpBrowser(browser);
         driver.manage().window().maximize();
         homePage = new HomePage(driver);
     }
 
     @Parameters("browser")
-    public void setUpBrowser(String browser){
+    public void setUpBrowser(@Optional ("chrome") String browser){
         if (browser.equalsIgnoreCase("chrome")){
             driver = new ChromeDriver();
         } else if (browser.equalsIgnoreCase("firefox")) {
