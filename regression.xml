@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Regression Test Suite" parallel="tests">
     <test name="Chrome" parallel="classes">
+        <parameter name="browser" value="headlesschrome"/>
         <classes>
             <class name="login.LoginTests">
                 <methods>
@@ -16,6 +17,7 @@
         </classes>
     </test>
     <test name="FireFox" parallel="classes">
+        <parameter name="browser" value="headlessfirefox"/>
         <classes>
             <class name="login.LoginTests">
                 <methods>
