@@ -15,6 +15,8 @@ public class LoginPage extends MethodHandles {
 
     private final By loginButton = By.cssSelector("[data-qa='login-button']");
 
+    private final By loginText = By.cssSelector(".login-form h2");
+
 
     private void insertEmail(String email) {
         sendKeys(emailField,email,4);
@@ -33,5 +35,8 @@ public class LoginPage extends MethodHandles {
         insertPassword(password);
         clickOnLoginButton();
 
+    }
+    public String getValidationMessage(){
+        return getText(loginText,3);
     }
 }

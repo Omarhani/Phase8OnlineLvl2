@@ -66,12 +66,15 @@ public class BaseTests {
         utilsTests = new UtilsTests(driver);
         utilsTests.takeScreenShot(method);
         ScreenRecorderUtil.stopRecord();
+        utilsTests.endsOfSteps();
         utilsTests.setStatus(method, result);
     }
 
     @BeforeMethod
     public void goHome(Method method) throws Exception {
+        utilsTests = new UtilsTests(driver);
         driver.get(dataModal().URL);
+        utilsTests.createTestCaseInReport(method);
         ScreenRecorderUtil.startRecord(method.getName());
     }
 

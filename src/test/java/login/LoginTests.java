@@ -7,6 +7,7 @@ import pages.LoginPage;
 import java.io.FileNotFoundException;
 
 import static reader.ReadDataFromJson.dataModal;
+import static utils.MethodHandles.myAssertEquals;
 
 public class LoginTests extends BaseTests {
 
@@ -16,6 +17,8 @@ public class LoginTests extends BaseTests {
         loginPage.loginFeature(
                 dataModal().Login.ValidCredentials.Username,
                 dataModal().Login.ValidCredentials.Password);
+        String actualResult = loginPage.getValidationMessage();
+        myAssertEquals(actualResult, "Hello");
     }
 
     @Test
