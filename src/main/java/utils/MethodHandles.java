@@ -44,22 +44,34 @@ public class MethodHandles {
 
     protected void click(By locator, int time) {
         explicitWait(locator, time);
+        addBorderToElement(driver,webElement(locator));
         webElement(locator).click();
         setSteps();
-        addBorderToElement(driver,webElement(locator));
     }
 
     protected void sendKeys(By locator, String text, int time) {
         explicitWait(locator, time);
+        addBorderToElement(driver,webElement(locator));
         webElement(locator).sendKeys(text);
         setSteps();
+    }
+    protected boolean isDisplayed(By locator, int time){
+        explicitWait(locator, time);
         addBorderToElement(driver,webElement(locator));
+        setSteps();
+        return webElement(locator).isDisplayed();
+    }
+    protected boolean isSelected(By locator, int time){
+        explicitWait(locator, time);
+        addBorderToElement(driver,webElement(locator));
+        setSteps();
+        return webElement(locator).isSelected();
     }
 
     protected String getText(By locator, int time){
         explicitWait(locator, time);
-        setSteps();
         addBorderToElement(driver,webElement(locator));
+        setSteps();
         return webElement(locator).getText();
     }
     private static String getMethodName() {
