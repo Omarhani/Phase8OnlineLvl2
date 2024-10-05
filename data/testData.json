@@ -1,24 +1,19 @@
 {
-  "URL": "https://automationexercise.com/",
+  "URL": "",
   "Login":{
     "ValidCredentials": {
-      "Username" : "Omar",
-      "Password": "123"
+      "Username" : "",
+      "Password": ""
     },
     "InvalidCredentials": {
       "InvalidUsername": {
-        "Username" : "Ahmed",
-        "Password": "456"
+        "Username" : "",
+        "Password": ""
       },
       "InvalidPassword": {
-        "Username" : "Mohamed",
-        "Password": "789"
+        "Username" : "",
+        "Password": ""
       }
     }
-  },
-  "Login1": [
-    ["Omar","123"],
-    ["Ahmed","456"],
-    ["Mohamed","789"]
-  ]
+  }
 }

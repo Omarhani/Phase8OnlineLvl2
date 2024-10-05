@@ -1,6 +1,5 @@
 package base;
 
-import data.DataModal;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -9,12 +8,8 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import pages.HomePage;
-import reader.ReadDataFromJson;
 import utils.ScreenRecorderUtil;
 import utils.UtilsTests;
-
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.lang.reflect.Method;
 
 import static reader.ReadDataFromJson.dataModal;
